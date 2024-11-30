@@ -69,7 +69,10 @@ const Assets = {
 	Jest: asset('jest.png'),
 	Unocss: asset('unocss.svg'),
 	Ruvy: asset('ruvy.svg'),
-	Postcss: asset('postcss.svg')
+	Postcss: asset('postcss.svg'),
+	DBU: asset('dbu.png'),
+	ExploreAI: asset('eai.png'),
+	Holberton: asset('holberton.png'),
 };
 
 export default Assets;

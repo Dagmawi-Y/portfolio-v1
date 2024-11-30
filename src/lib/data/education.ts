@@ -5,29 +5,54 @@ const title = 'Education';
 
 const items: Array<Education> = [
 	{
-		degree: 'Bachelor degree of Computer Science',
+		degree: 'BSc in Software Engineering',
 		description: '',
-		location: 'Tunisia',
-		logo: Assets.Unknown,
+		location: 'Debre Birhan, Ethiopia',
+		logo: Assets.DBU,
 		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
+		organization: 'DBU',
+		period: { from: new Date(2019, 10, 20), to: new Date(2024, 6, 29) },
 		shortDescription: '',
-		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
+		slug: 'se-bsc',
+		subjects: ['Java', 'C++', 'Python', 'Web Development', 'Databases', 'Data Structures', 'Algorithms', 'Operating Systems', 'Computer Networks', 'Computer Architecture', 'Project Management' ]
 	},
 	{
-		degree: 'PhD of Computer Science',
+		degree: 'Data Science',
 		description: '',
-		location: 'USA',
-		logo: Assets.Unknown,
+		location: 'South Africa',
+		logo: Assets.ExploreAI,
 		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
+		organization: 'Explore AI Academy',
+		period: { from: new Date(2023, 9, 11), to: new Date(2024, 7, 29) },
 		shortDescription: '',
-		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
-	}
+		slug: 'ds-eai-certificate',
+		subjects: ['Python', 'Data Analysis', 'Data Visualization', 'Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Big Data', 'Data Engineering', 'Data Science Project' ],
+	},
+	{
+		degree: 'BA in Management',
+		description: '',
+		location: 'Debre Birhan, Ethiopia',
+		logo: Assets.DBU,
+		name: '',
+		organization: 'DBU',
+		period: { from: new Date(2019, 11, 10), to: new Date(2024, 6, 29) },
+		shortDescription: '',
+		slug: 'mgmt-ba',
+		subjects: ['Management', 'Marketing', 'Accounting', 'Finance', 'Economics', 'Business Law', 'Business Communication', 'Business Ethics', 'Business Statistics', 'Business Research Methods', 'Human Resource Management', 'Organizational Behavior', 'Strategic Management' ]
+	},
+	{
+		degree: 'Full Stack Software Engineering',
+		description: '',
+		location: 'Online, USA',
+		logo: Assets.Holberton,
+		name: '',
+		organization: 'Holberton School',
+		period: { from: new Date(2023, 11, 20), to: new Date(2025, 1, 18) },
+		shortDescription: '',
+		slug: 'se-holberton',
+		subjects: ['C', 'Python', 'JavaScript', 'React', 'Node.js', 'Express.js', 'SQL', 'NoSQL', 'Docker', 'CI/CD', 'Web Development', 'System Engineering', 'DevOps', 'Project Management' ],
+	},
+	
 ];
 
 const EducationData = { title, items };
