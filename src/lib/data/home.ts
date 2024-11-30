@@ -11,12 +11,14 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+		'Welcome to my little corner of the internet. I\'m Daggy, A curious guy who loves to learn new things and build stuff.',
 	links: [
-		{ label: 'GitHub', href: 'https://github.com', icon: 'i-carbon-logo-github' },
-		{ label: 'LinkedIn', href: 'https://linkedin.com', icon: 'i-carbon-logo-linkedin' },
-		{ label: 'Twitter', href: 'https://twitter.com', icon: 'i-carbon-logo-twitter' },
-		{ label: 'Email', href: 'mailto:riadh.adrani@pm.me', icon: 'i-carbon-at' }
+		{ label: 'GitHub', href: 'https://github.com/Dagmawi-Y', icon: 'i-carbon-logo-github' },
+		{ label: 'LinkedIn', href: 'https://linkedin.com/dagmawi-y-hailu', icon: 'i-carbon-logo-linkedin' },
+		{ label: 'Twitter', href: 'https://x.com/daggyohannes', icon: 'i-carbon-logo-twitter' },
+		{ label: 'Email', href: 'mailto:dagmawi.inbox@gmail.com', icon: 'i-carbon-at' },
+		{label: 'Telegram', href: 'https://t.me/dag_mawi', icon: 'i-carbon-logo-telegram'},
+		
 	]
 };
 

@@ -36,6 +36,7 @@
 		<div
 			class="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left"
 		>
+			<img src="/images/me@360.jpg" class="h-[200px] w-[200px] rounded-full object-cover" alt="Avatar" />
 			<H1>{HomeData.hero.title}</H1>
 			<Muted>{HomeData.hero.description}</Muted>
 			<div class="flex flex-row gap-1">
