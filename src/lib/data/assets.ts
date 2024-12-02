@@ -73,6 +73,9 @@ const Assets = {
 	DBU: asset('dbu.png'),
 	ExploreAI: asset('eai.png'),
 	Holberton: asset('holberton.png'),
+	Bash: asset('bash.svg'),
+	Git: asset('git.svg'),
+	NextJS: asset('next-js.svg')
 };
 
 export default Assets;

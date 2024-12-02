@@ -33,12 +33,12 @@
 	<div
 		class="flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-between"
 	>
+	<img src="/images/me@360.jpg" class="h-[200px] w-[200px] rounded-full object-cover aspect-square" alt="Avatar" />
 		<div
 			class="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left"
 		>
-			<img src="/images/me@360.jpg" class="h-[200px] w-[200px] rounded-full object-cover" alt="Avatar" />
 			<H1>{HomeData.hero.title}</H1>
-			<Muted>{HomeData.hero.description}</Muted>
+				<p>{HomeData.hero.description}</p>
 			<div class="flex flex-row gap-1">
 				{#each HomeData.hero.links as item}
 					<a href={item.href} target="_blank">

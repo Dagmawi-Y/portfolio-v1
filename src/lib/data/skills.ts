@@ -83,65 +83,239 @@ const items = [
 		slug: 'js',
 		color: 'yellow',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Proficient in JavaScript, with extensive experience in front-end and back-end development, including dynamic web applications and API integrations.',
 		logo: Assets.JavaScript,
-		name: 'Javascript',
+		name: 'JavaScript',
 		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'ts',
 		color: 'blue',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Skilled in TypeScript for building scalable and maintainable applications with strong typing and robust features.',
 		logo: Assets.TypeScript,
-		name: 'Typescript',
+		name: 'TypeScript',
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'css',
-		color: 'blue',
+		slug: 'dart',
+		color: 'teal',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
-		logo: Assets.CSS,
-		name: 'CSS',
-		category: 'markup-style'
+			'Expertise in Dart for cross-platform mobile app development, primarily using Flutter to create engaging user experiences.',
+		logo: Assets.Dart,
+		name: 'Dart',
+		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'html',
-		color: 'orange',
+		slug: 'python',
+		color: 'green',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
-		logo: Assets.HTML,
-		name: 'HTML',
-		category: 'markup-style'
-	}),
-	defineSkill({
-		slug: 'sass',
-		color: 'pink',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
-		logo: Assets.Sass,
-		name: 'Sass',
-		category: 'markup-style'
+			'Proficient in Python for data analysis, machine learning, and backend development, leveraging libraries and frameworks like Pandas, NumPy, and Flask.',
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'reactjs',
 		color: 'cyan',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Extensive experience with React.js for building dynamic and responsive user interfaces, including SPAs and PWAs.',
 		logo: Assets.ReactJs,
-		name: 'React Js',
+		name: 'React.js',
 		category: 'library'
+	}),
+	defineSkill({
+		slug: 'react-native',
+		color: 'blue',
+		description:
+			'Skilled in React Native for building cross-platform mobile apps with native performance and seamless UI/UX.',
+		logo: Assets.ReactJs,
+		name: 'React Native',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'flutter',
+		color: 'blue',
+		description:
+			'Experienced in Flutter for crafting visually appealing and performant mobile applications.',
+		logo: Assets.Flutter,
+		name: 'Flutter',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'sql',
+		color: 'blue',
+		description:
+			'Proficient in SQL for relational database management, complex queries, and data modeling.',
+		logo: Assets.PostgreSQL,
+		name: 'SQL',
+		category: 'database'
+	}),
+	defineSkill({
+		slug: 'nosql',
+		color: 'green',
+		description:
+			'Experienced with NoSQL databases like MongoDB for handling dynamic and unstructured data efficiently.',
+		logo: Assets.MongoDB,
+		name: 'NoSQL',
+		category: 'database'
+	}),
+	defineSkill({
+		slug: 'docker',
+		color: 'blue',
+		description:
+			'Experienced in containerizing applications with Docker to streamline development workflows and ensure consistency across environments.',
+		logo: Assets.Docker,
+		name: 'Docker',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'bash',
+		color: 'black',
+		description:
+			'Proficient in Bash scripting for automating tasks and managing system configurations effectively.',
+		logo: Assets.Bash,
+		name: 'Bash',
+		category: 'scripting'
+	}),
+	defineSkill({
+		slug: 'git',
+		color: 'orange',
+		description:
+			'Experienced with Git for version control, collaboration, and maintaining robust code repositories.',
+		logo: Assets.Git,
+		name: 'Git',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'nestjs',
+		color: 'red',
+		description:
+			'Skilled in NestJS for building scalable and maintainable backend services in a microservices architecture.',
+		logo: Assets.NestJs,
+		name: 'NestJS',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'nextjs',
+		color: 'black',
+		description:
+			'Proficient in Next.js for building server-side rendered React applications with excellent performance and SEO capabilities.',
+		logo: Assets.NextJS,
+		name: 'Next.js',
+		category: 'framework'
 	}),
 	defineSkill({
 		slug: 'svelte',
 		color: 'orange',
-		description: svelteMd,
+		description:
+			'Experienced in Svelte for creating highly reactive and efficient web applications with a lean development approach.',
 		logo: Assets.Svelte,
 		name: 'Svelte',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'sveltekit',
+		color: 'orange',
+		description:
+			'Proficient in SvelteKit for building full-stack applications with streamlined routing and server-side rendering.',
+		logo: Assets.Svelte,
+		name: 'SvelteKit',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'aws',
+		color: 'orange',
+		description:
+			'Experienced in using AWS services like EC2, S3, and RDS for scalable cloud infrastructure and storage solutions.',
+		logo: Assets.AWS,
+		name: 'AWS',
+		category: 'cloud'
+	}),
+	defineSkill({
+		slug: 'c',
+		color: 'blue',
+		description:
+			'Proficient in C for low-level programming, systems engineering, and performance-critical applications.',
+		logo: Assets.C,
+		name: 'C',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'kafka',
+		color: 'green',
+		description:
+			'Skilled in Apache Kafka for building real-time data streaming and event-driven architectures.',
+		logo: Assets.Kafka,
+		name: 'Kafka',
+		category: 'messaging'
+	}),
+	defineSkill({
+		slug: 'nginx',
+		color: 'green',
+		description:
+			'Experienced with Nginx for web serving, load balancing, and acting as a reverse proxy for APIs.',
+		logo: Assets.Nginx,
+		name: 'Nginx',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'numpy',
+		color: 'blue',
+		description:
+			'Proficient in NumPy for numerical computations and data analysis in Python.',
+		logo: Assets.Numpy,
+		name: 'NumPy',
 		category: 'library'
+	}),
+	defineSkill({
+		slug: 'pandas',
+		color: 'blue',
+		description:
+			'Experienced in Pandas for data manipulation, cleaning, and analysis in Python.',
+		logo: Assets.Pandas,
+		name: 'Pandas',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'rabbitmq',
+		color: 'green',
+		description:
+			'Skilled in RabbitMQ for message brokering and asynchronous communication between microservices.',
+		logo: Assets.RabbitMQ,
+		name: 'RabbitMQ',
+		category: 'messaging'
+	}),
+	defineSkill({
+		slug: 'expressjs',
+		color: 'blue',
+		description:
+			'Proficient in Express.js for building robust and scalable backend services in Node.js.',
+		logo: Assets.ExpressJs,
+		name: 'Express.js',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'firebase',
+		color: 'orange',
+		description:
+			'Experienced with Firebase for backend-as-a-service (BaaS) solutions, including real-time databases and authentication.',
+		logo: Assets.Firebase,
+		name: 'Firebase',
+		category: 'cloud'
+	}),
+	defineSkill({
+		slug: 'redis',
+		color: 'red',
+		description:
+			'Proficient in Redis for caching, session management, and optimizing application performance.',
+		logo: Assets.Redis,
+		name: 'Redis',
+		category: 'database'
 	})
+
 ] as const;
+
 
 const SkillsData = {
 	title,
