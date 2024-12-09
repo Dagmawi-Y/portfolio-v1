@@ -5,7 +5,7 @@ const suffix = 'Slick Portfolio With Svelte 5';
 const BaseData = {
 	firstName,
 	lastName,
-	suffix,
+	// suffix,
 	get fullName() {
 		return `${firstName} ${lastName}`;
 	}

@@ -4,67 +4,120 @@ import type { Project } from './types';
 
 const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'merchant-super-app',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'Developed the merchant segment of a mobile super app for a local bank on both Android and iOS platforms. The app features a pixel-perfect design and provides a seamless user experience across platforms, enabling merchants to manage transactions, view analytics, and handle customer interactions efficiently.',
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
-		links: [
-			{ to: 'https://github.com/', label: 'GitHub' },
-			{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'Reporsitory' },
-			{ to: 'https://svelte.dev/', label: 'Svelte' },
-			{ to: 'https://www.shadcn-svelte.com/', label: 'Shadcn Svelte' }
-		],
+			'A comprehensive mobile super app for merchants with integrated banking and business management features.',
+		links: [],
 		logo: Assets.Unknown,
-		name: 'Slick Portfolio With Svelte',
+		name: 'Merchant Super App',
 		period: {
-			from: new Date()
+			from: new Date(2024, 6)
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template'
+		skills: getSkills('react-native', 'ts', 'js', 'reactjs'),
+		type: 'Mobile Application'
 	},
 	{
-		slug: 'slick-portfolio-svelte',
+		slug: 'teletv-player',
 		color: '#ff3e00',
 		description:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+			'Created an innovative entertainment platform mobile app player for TeleTV that revolutionized content consumption. The app attracted over 10 million users within months of its launch, becoming a market sensation with its user-friendly interface and smooth streaming capabilities.',
 		shortDescription:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
-		logo: Assets.Svelte,
-		name: 'Slick Portfolio',
+			'A highly successful mobile entertainment platform with over 10M users.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'TeleTV Mobile Player',
 		period: {
-			from: new Date()
+			from: new Date(2024, 6)
 		},
-		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
-		type: 'Website Template',
-		screenshots: [
-			{
-				label: 'screen 1',
-				src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '2',
-				src: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '3',
-				src: 'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '4',
-				src: 'https://images.unsplash.com/photo-1542903660-eedba2cda473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '5',
-				src: 'https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			},
-			{
-				label: '6',
-				src: 'https://images.unsplash.com/photo-1585079542156-2755d9c8a094?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
-			}
-		]
+		skills: getSkills('react-native', 'ts', 'js'),
+		type: 'Mobile Application'
+	},
+	{
+		slug: 'cashgo-remittance',
+		color: '#00ff00',
+		description:
+			'Contributed to the development of CashGO, a foreign remittance app that drives over a million dollars per day into Ethiopia\'s economy. The app revolutionizes cross-border transfers with its efficient and secure transaction processing system.',
+		shortDescription:
+			'A high-impact foreign remittance app processing millions in daily transactions.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'CashGO Remittance',
+		period: {
+			from: new Date(2024, 6)
+		},
+		skills: getSkills('react-native', 'ts', 'js'),
+		type: 'Mobile Application'
+	},
+	{
+		slug: 'business-management-app',
+		color: '#4287f5',
+		description:
+			'Developed a comprehensive local business management app that significantly improved business operations, resulting in an average 34% increase in profit for businesses that implemented the system. The app includes features for inventory management, sales tracking, and financial reporting.',
+		shortDescription:
+			'A business management solution that increased client profits by 34%.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'Business Management System',
+		period: {
+			from: new Date(2023, 10),
+			to: new Date(2024, 7)
+		},
+		skills: getSkills('flutter', 'dart', 'firebase'),
+		type: 'Mobile Application'
+	},
+	{
+		slug: 'abay-mobile-banking',
+		color: '#42f5a7',
+		description:
+			'Developed and maintained a mobile banking application for Abay Bank S.C. The app provides customers with secure access to their accounts, enabling them to perform transactions, check balances, and manage their banking needs conveniently.',
+		shortDescription:
+			'A full-featured mobile banking application for Abay Bank S.C.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'Abay Bank Mobile Banking',
+		period: {
+			from: new Date(2023, 10),
+			to: new Date(2024, 7)
+		},
+		skills: getSkills('flutter', 'dart'),
+		type: 'Mobile Application'
+	},
+	{
+		slug: 'talent-recruitment-system',
+		color: '#f542f2',
+		description:
+			'Developed a full-stack online talent recruitment system that efficiently connects job seekers with employers. The platform features automated matching, application tracking, and comprehensive candidate management tools.',
+		shortDescription:
+			'A modern recruitment platform connecting job seekers and employers.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'Talent Recruitment Platform',
+		period: {
+			from: new Date(2023, 6),
+			to: new Date(2023, 11)
+		},
+		skills: getSkills('reactjs', 'ts', 'nestjs'),
+		type: 'Web Application'
+	},
+	{
+		slug: 'fitness-tracker',
+		color: '#f5d442',
+		description:
+			'Created a Flutter-based fitness management application featuring workout planning and tracking capabilities with detailed graphical analytics. The app provides personalized workout recommendations and progress tracking.',
+		shortDescription:
+			'A comprehensive fitness management app with analytics and tracking.',
+		links: [],
+		logo: Assets.Unknown,
+		name: 'Fitness Management App',
+		period: {
+			from: new Date(2023, 4),
+			to: new Date(2023, 11)
+		},
+		skills: getSkills('flutter', 'dart'),
+		type: 'Mobile Application'
 	}
 ];
 

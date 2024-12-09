@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		'Welcome to my little corner of the internet. I\'m Daggy, A curious guy who loves to learn new things and build stuff.',
+		'Just a curious guy on the internet who loves to build stuff.',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/Dagmawi-Y', icon: 'i-carbon-logo-github' },
 		{ label: 'LinkedIn', href: 'https://linkedin.com/dagmawi-y-hailu', icon: 'i-carbon-logo-linkedin' },
