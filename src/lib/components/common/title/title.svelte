@@ -5,5 +5,5 @@
 </script>
 
 <svelte:head>
-	<title>{`${title} | ${BaseData.suffix}`}</title>
+	<title>{`${title}`}</title>
 </svelte:head>

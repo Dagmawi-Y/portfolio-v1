@@ -9,16 +9,15 @@ const hero: {
 	description: string;
 	links: Array<{ label: string; href: string; icon: `i-carbon-${string}` }>;
 } = {
-	title: `${BaseData.fullName},`,
+	title: `${BaseData.firstName}\n${BaseData.lastName}`,
 	description:
-		'Just a curious guy on the internet who loves to build stuff.',
+		'A curious guy on the internet.',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/Dagmawi-Y', icon: 'i-carbon-logo-github' },
 		{ label: 'LinkedIn', href: 'https://linkedin.com/dagmawi-y-hailu', icon: 'i-carbon-logo-linkedin' },
 		{ label: 'Twitter', href: 'https://x.com/daggyohannes', icon: 'i-carbon-logo-twitter' },
 		{ label: 'Email', href: 'mailto:dagmawi.inbox@gmail.com', icon: 'i-carbon-at' },
 		{label: 'Telegram', href: 'https://t.me/dag_mawi', icon: 'i-carbon-logo-telegram'},
-		
 	]
 };
 

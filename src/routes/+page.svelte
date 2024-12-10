@@ -16,37 +16,212 @@
 	import { mode } from 'mode-watcher';
 	import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
 	import { onMount } from 'svelte';
+	import ContactForm from '$lib/components/contact-form/contact-form.svelte';
 
 	let api: CarouselAPI;
+	let showContactForm = false;
+
+	let currentGradient = {
+		firstLine: { start: 240, end: 30 }, // Initial blue to brown
+		secondLine: { start: 30, end: 240 } // Initial brown to blue
+	};
+
+	function generateRandomHue() {
+		return Math.floor(Math.random() * 360);
+	}
+
+	function updateGradient() {
+		currentGradient = {
+			firstLine: {
+				start: generateRandomHue(),
+				end: generateRandomHue()
+			},
+			secondLine: {
+				start: generateRandomHue(),
+				end: generateRandomHue()
+			}
+		};
+	}
 
 	onMount(() => {
 		setInterval(() => {
 			if (!api) return;
-
 			api.scrollNext();
 		}, 2000);
 	});
+
+	let sparklesContainer: HTMLDivElement | null = null;
+
+	function createSparkles() {
+		// Remove existing sparkles if any
+		if (sparklesContainer) {
+			document.body.removeChild(sparklesContainer);
+		}
+
+		sparklesContainer = document.createElement('div');
+		sparklesContainer.style.cssText = `
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 40;
+			filter: blur(2px);
+		`;
+		document.body.insertBefore(sparklesContainer, document.body.firstChild);
+
+		const sparkles = Array.from({ length: 50 }, () => {
+			const sparkle = document.createElement('div');
+			sparkle.style.cssText = `
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: hsl(${Math.random() * 360}, 100%, 70%);
+				left: ${Math.random() * 100}vw;
+				top: ${Math.random() * 100}vh;
+				transform: scale(0);
+				transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+				opacity: 0;
+			`;
+			if (sparklesContainer) sparklesContainer.appendChild(sparkle);
+			return sparkle;
+		});
+
+		// Animate sparkles in
+		sparkles.forEach((sparkle, i) => {
+			setTimeout(() => {
+				sparkle.style.transform = 'scale(1)';
+				sparkle.style.opacity = '1';
+			}, i * 20);
+		});
+
+		// Show contact form
+		showContactForm = true;
+	}
+
+	function removeSparkles() {
+		if (!sparklesContainer) return;
+
+		const sparkles = Array.from(sparklesContainer.children) as HTMLElement[];
+		
+		// Animate sparkles out
+		sparkles.forEach((sparkle, i) => {
+			setTimeout(() => {
+				sparkle.style.transform = 'scale(1.5)';
+				sparkle.style.opacity = '0';
+			}, i * 20);
+		});
+
+		// Remove container after animations
+		setTimeout(() => {
+			if (sparklesContainer) {
+				sparklesContainer.style.opacity = '0';
+				setTimeout(() => {
+					if (sparklesContainer && sparklesContainer.parentNode) {
+						document.body.removeChild(sparklesContainer);
+						sparklesContainer = null;
+					}
+				}, 500);
+			}
+		}, sparkles.length * 20 + 500);
+	}
+
+	$: if (!showContactForm && sparklesContainer) {
+		removeSparkles();
+	}
 </script>
+
+<style>
+	@keyframes sparkle {
+		0% {
+			transform: scale(0) rotate(0deg);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1.5) rotate(180deg);
+			opacity: 0;
+		}
+	}
+
+	.rainbow-text {
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	.rainbow-text span {
+		display: inline-block;
+		opacity: 0.5;
+		transition: all 0.3s ease;
+	}
+
+	.rainbow-text:hover span {
+		opacity: 1;
+	}
+
+	@keyframes rainbow-wave {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+</style>
 
 <Title title={HomeData.title} />
 <ResponsiveContainer className="flex flex-col justify-center flex-1">
 	<div
-		class="flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-between"
+		class="flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-center mt-5" 
 	>
-	<img 
-		src="/images/me@360.jpg" 
-		class="h-[200px] w-[200px] rounded-full object-cover aspect-square grayscale hover:grayscale-0 transition-all duration-300" 
-		alt="Avatar" 
-	/>
+		<img 
+			src="/images/me@360.jpg" 
+			class="h-[200px] w-[200px] rounded-full object-cover aspect-square grayscale hover:grayscale-0 transition-all duration-300" 
+			alt="Avatar" 
+		/>
 		<div
 			class="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left"
 		>
-			<H1>{HomeData.hero.title}</H1>
-			<div class="flex flex-col gap-2">
-				{#each HomeData.hero.description.split('. ') as sentence}
-					<p>{sentence}{sentence.endsWith('.') ? '' : '.'}</p>
-				{/each}
-			</div>
+			<H1>
+				<div 
+					class="rainbow-text" 
+					role="button"
+					tabindex="0"
+					on:mouseenter={updateGradient}
+					on:click={() => {
+						createSparkles();
+						showContactForm = true;
+					}}
+					on:keydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							createSparkles();
+							showContactForm = true;
+						}
+					}}
+				>
+					{#each HomeData.hero.title.split('\n') as line, lineIndex}
+						<div>
+							{#each line.split('') as char, i}
+								<span 
+									style="
+										animation-delay: {i * 0.05}s; 
+										color: hsl({
+											lineIndex === 0 
+												? currentGradient.firstLine.start + (i * (currentGradient.firstLine.end - currentGradient.firstLine.start) / line.length)
+												: currentGradient.secondLine.start + (i * (currentGradient.secondLine.end - currentGradient.secondLine.start) / line.length)
+										}, 70%, 50%);
+									"
+								>{char}</span>
+							{/each}
+						</div>
+					{/each}
+				</div>
+			</H1>
+			<p>{HomeData.hero.description}</p>
 			<div class="flex flex-row gap-1">
 				{#each HomeData.hero.links as item}
 					<a href={item.href} target="_blank">
@@ -86,3 +261,7 @@
 		</div>
 	</div>
 </ResponsiveContainer>
+
+{#if showContactForm}
+	<ContactForm bind:showContactForm />
+{/if}
