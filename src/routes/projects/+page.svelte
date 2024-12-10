@@ -8,6 +8,7 @@
 	import SkillsData from '$lib/data/skills';
 	import type { Skill } from '$lib/data/types';
 	import { onMount } from 'svelte';
+	import { mode } from 'mode-watcher';
 
 	interface SkillFilter extends Skill {
 		isSelected?: boolean;
@@ -23,19 +24,25 @@
 
 	let search = $state('');
 	let result = $derived(
-		ProjectsData.items.filter((project) => {
-			const isFiltered =
-				filters.every((item) => !item.isSelected) ||
-				project.skills.some((tech) =>
-					filters.some((filter) => filter.isSelected && filter.slug === tech.slug)
-				);
+		ProjectsData.items
+			.sort((a, b) => {
+				const dateA = a.period.to || new Date();
+				const dateB = b.period.to || new Date();
+				return dateB.getTime() - dateA.getTime();
+			})
+			.filter((project) => {
+				const isFiltered =
+					filters.every((item) => !item.isSelected) ||
+					project.skills.some((tech) =>
+						filters.some((filter) => filter.isSelected && filter.slug === tech.slug)
+					);
 
-			const isSearched =
-				search.trim().length === 0 ||
-				project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
+				const isSearched =
+					search.trim().length === 0 ||
+					project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
 
-			return isFiltered && isSearched;
-		})
+				return isFiltered && isSearched;
+			})
 	);
 
 	const toggleSelected = (slug: string) => {
@@ -60,30 +67,31 @@
 </script>
 
 <SearchPage title={ProjectsData.title} {onSearch}>
-	<div class="flex flex-1 flex-col gap-8">
-		<div class="flex flex-row flex-wrap gap-2">
-			{#each filters as it (it.slug)}
-				<Toggle
-					pressed={it.isSelected}
-					variant="outline"
-					class="flex flex-row items-center gap-2 rounded-lg"
-					on:click={() => toggleSelected(it.slug)}
-				>
-					{#if it.isSelected}
-						<Icon icon="i-carbon-close" />
-					{/if}
-					{it.name}</Toggle
-				>
-			{/each}
-		</div>
-		{#if result.length === 0}
-			<EmptyResult />
-		{:else}
+	{#if result.length === 0}
+		<EmptyResult />
+	{:else}
+		<div class="flex flex-col gap-4">
+			<div class="flex flex-row flex-wrap gap-2">
+				{#each filters as item (item.slug)}
+					<Toggle
+						pressed={item.isSelected}
+						onPressedChange={() => toggleSelected(item.slug)}
+						class="flex flex-row items-center gap-2"
+					>
+						<img
+							src={$mode === 'dark' ? item.logo.dark : item.logo.light}
+							class="h-[20px] w-[20px]"
+							alt={item.name}
+						/>
+						<Icon icon="i-carbon-close" className={item.isSelected ? 'block' : 'hidden'} />
+					</Toggle>
+				{/each}
+			</div>
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 				{#each result as it (it.slug)}
 					<ProjectCard project={it} />
 				{/each}
 			</div>
-		{/if}
-	</div>
+		</div>
+	{/if}
 </SearchPage>

@@ -9,14 +9,20 @@
 	let search = $state('');
 
 	let result = $derived(
-		EducationData.items.filter(
-			(it) =>
-				it.name.toLowerCase().includes(search.toLowerCase()) ||
-				it.description.toLowerCase().includes(search) ||
-				it.location.toLowerCase().includes(search) ||
-				it.degree.toLowerCase().includes(search) ||
-				it.organization.toLowerCase().includes(search)
-		)
+		EducationData.items
+			.sort((a, b) => {
+				const dateA = a.period.to || new Date();
+				const dateB = b.period.to || new Date();
+				return dateB.getTime() - dateA.getTime();
+			})
+			.filter(
+				(it) =>
+					it.name.toLowerCase().includes(search.toLowerCase()) ||
+					it.description.toLowerCase().includes(search) ||
+					it.location.toLowerCase().includes(search) ||
+					it.degree.toLowerCase().includes(search) ||
+					it.organization.toLowerCase().includes(search)
+			)
 	);
 
 	const onSearch = (query: string) => (search = query);

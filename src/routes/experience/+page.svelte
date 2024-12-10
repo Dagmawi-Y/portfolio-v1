@@ -9,12 +9,18 @@
 	let search = $state('');
 
 	let result = $derived(
-		ExperienceData.items.filter(
-			(it) =>
-				it.name.toLowerCase().includes(search.toLowerCase()) ||
-				it.company.toLowerCase().includes(search.toLowerCase()) ||
-				it.description.toLowerCase().includes(search)
-		)
+		ExperienceData.items
+			.sort((a, b) => {
+				const dateA = a.period.to || new Date();
+				const dateB = b.period.to || new Date();
+				return dateB.getTime() - dateA.getTime();
+			})
+			.filter(
+				(it) =>
+					it.name.toLowerCase().includes(search.toLowerCase()) ||
+					it.company.toLowerCase().includes(search.toLowerCase()) ||
+					it.description.toLowerCase().includes(search)
+			)
 	);
 
 	const onSearch = (query: string) => (search = query);
