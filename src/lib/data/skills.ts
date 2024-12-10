@@ -18,7 +18,8 @@ const categories = [
 	defineSkillCategory({ name: 'Dev Tools', slug: 'devtools' }),
 	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style' }),
 	defineSkillCategory({ name: 'Design', slug: 'design' }),
-	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' })
+	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' }),
+	defineSkillCategory({ name: 'Tools', slug: 'tools' })
 ] as const;
 
 const defineSkill = <S extends string>(
@@ -312,6 +313,60 @@ const items = [
 		logo: Assets.Redis,
 		name: 'Redis',
 		category: 'database'
+	}),
+	defineSkill({
+		slug: 'jira',
+		color: 'blue',
+		description:
+			'Experienced with Jira for agile project management, issue tracking, and team collaboration.',
+		logo: Assets.Unknown,
+		name: 'Jira',
+		category: 'tools'
+	}),
+	defineSkill({
+		slug: 'trello',
+		color: 'teal',
+		description:
+			'Skilled in Trello for task management, workflow organization, and team coordination.',
+		logo: Assets.Unknown,
+		name: 'Trello',
+		category: 'tools'
+	}),
+	defineSkill({
+		slug: 'leadership',
+		color: 'purple',
+		description:
+			'Strong leadership abilities in guiding teams, setting clear objectives, and driving project success.',
+		logo: Assets.Unknown,
+		name: 'Leadership',
+		category: 'soft'
+	}),
+	defineSkill({
+		slug: 'team-management',
+		color: 'indigo',
+		description:
+			'Experienced in managing cross-functional teams, fostering collaboration, and optimizing team performance.',
+		logo: Assets.Unknown,
+		name: 'Team Management',
+		category: 'soft'
+	}),
+	defineSkill({
+		slug: 'communication',
+		color: 'pink',
+		description:
+			'Excellent communication skills in presenting ideas, facilitating meetings, and maintaining stakeholder relationships.',
+		logo: Assets.Unknown,
+		name: 'Communication',
+		category: 'soft'
+	}),
+	defineSkill({
+		slug: 'problem-solving',
+		color: 'orange',
+		description:
+			'Strong analytical and problem-solving abilities to identify challenges and implement effective solutions.',
+		logo: Assets.Unknown,
+		name: 'Problem Solving',
+		category: 'soft'
 	})
 
 ] as const;

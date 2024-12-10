@@ -12,7 +12,7 @@ const items: Array<Project> = [
 			'A comprehensive mobile super app for merchants with integrated banking and business management features.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'Merchant Super App',
+		name: 'Dashen Bank Super App',
 		period: {
 			from: new Date(2024, 6)
 		},
@@ -28,7 +28,7 @@ const items: Array<Project> = [
 			'A highly successful mobile entertainment platform with over 10M users.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'TeleTV Mobile Player',
+		name: 'TeleTV - Ethiopian Movie Streaming App',
 		period: {
 			from: new Date(2024, 6)
 		},
@@ -36,15 +36,15 @@ const items: Array<Project> = [
 		type: 'Mobile Application'
 	},
 	{
-		slug: 'cashgo-remittance',
+		slug: 'dome-app',
 		color: '#00ff00',
 		description:
-			'Contributed to the development of CashGO, a foreign remittance app that drives over a million dollars per day into Ethiopia\'s economy. The app revolutionizes cross-border transfers with its efficient and secure transaction processing system.',
+			'Developed a comprehensive event management application for the Ethiopian Science Museum Dome. The app streamlined visitor registration, event scheduling, and attendance tracking, resulting in a 40% reduction in check-in time and improved visitor experience. Implemented real-time analytics dashboard that helped optimize event capacity management by 25%.',
 		shortDescription:
-			'A high-impact foreign remittance app processing millions in daily transactions.',
+			'Event management system for Ethiopian Science Museum Dome with real-time analytics.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'CashGO Remittance',
+		name: 'Dome App',
 		period: {
 			from: new Date(2024, 6)
 		},
@@ -60,7 +60,7 @@ const items: Array<Project> = [
 			'A business management solution that increased client profits by 34%.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'Business Management System',
+		name: 'Gebi - SMB Management System',
 		period: {
 			from: new Date(2023, 10),
 			to: new Date(2024, 7)
@@ -94,7 +94,7 @@ const items: Array<Project> = [
 			'A modern recruitment platform connecting job seekers and employers.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'Talent Recruitment Platform',
+		name: 'Ketari - A Modern Talent Recruitment Platform',
 		period: {
 			from: new Date(2023, 6),
 			to: new Date(2023, 11)
@@ -111,7 +111,7 @@ const items: Array<Project> = [
 			'A comprehensive fitness management app with analytics and tracking.',
 		links: [],
 		logo: Assets.Unknown,
-		name: 'Fitness Management App',
+		name: 'EthioFitness - Fitness Management App',
 		period: {
 			from: new Date(2023, 4),
 			to: new Date(2023, 11)
