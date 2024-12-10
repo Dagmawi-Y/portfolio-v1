@@ -75,7 +75,8 @@ const Assets = {
 	Holberton: asset('holberton.png'),
 	Bash: asset('bash.svg'),
 	Git: asset('git.svg'),
-	NextJS: asset('next-js.svg')
+	NextJS: asset('next-js.svg'),
+	
 };
 
 export default Assets;
