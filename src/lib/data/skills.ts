@@ -315,29 +315,14 @@ const items = [
 		category: 'database'
 	}),
 	defineSkill({
-		slug: 'jira',
-		color: 'blue',
-		description:
-			'Experienced with Jira for agile project management, issue tracking, and team collaboration.',
-		logo: Assets.Unknown,
-		name: 'Jira',
-		category: 'tools'
-	}),
-	defineSkill({
-		slug: 'trello',
-		color: 'teal',
-		description:
-			'Skilled in Trello for task management, workflow organization, and team coordination.',
-		logo: Assets.Unknown,
-		name: 'Trello',
-		category: 'tools'
-	}),
-	defineSkill({
 		slug: 'leadership',
 		color: 'purple',
 		description:
 			'Strong leadership abilities in guiding teams, setting clear objectives, and driving project success.',
-		logo: Assets.Unknown,
+		logo: {
+			light: '/images/leadership.jpg',
+			dark: '/images/leadership.jpg'
+		},
 		name: 'Leadership',
 		category: 'soft'
 	}),
@@ -346,7 +331,10 @@ const items = [
 		color: 'indigo',
 		description:
 			'Experienced in managing cross-functional teams, fostering collaboration, and optimizing team performance.',
-		logo: Assets.Unknown,
+		logo: {
+			light: '/images/team-mgmt.png',
+			dark: '/images/team-mgmt.png'
+		},
 		name: 'Team Management',
 		category: 'soft'
 	}),
@@ -355,7 +343,10 @@ const items = [
 		color: 'pink',
 		description:
 			'Excellent communication skills in presenting ideas, facilitating meetings, and maintaining stakeholder relationships.',
-		logo: Assets.Unknown,
+		logo: {
+			light: '/images/communication.png',
+			dark: '/images/communication.png'
+		},
 		name: 'Communication',
 		category: 'soft'
 	}),
@@ -364,7 +355,10 @@ const items = [
 		color: 'orange',
 		description:
 			'Strong analytical and problem-solving abilities to identify challenges and implement effective solutions.',
-		logo: Assets.Unknown,
+		logo: {
+			light: '/images/prblm-slving.png',
+			dark: '/images/prblm-slving.png'
+		},
 		name: 'Problem Solving',
 		category: 'soft'
 	})
