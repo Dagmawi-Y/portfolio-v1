@@ -58,7 +58,7 @@ const items: Array<Experience> = [
 		type: 'Project Management',
 		location: 'Addis Ababa, Ethiopia',
 		period: { from: new Date(2023, 7), to: new Date(2023, 9) },
-		skills: getSkills(),
+		skills: getSkills('jira', 'trello', 'git'),
 		name: 'Project Manager',
 		color: 'green',
 		links: [],
