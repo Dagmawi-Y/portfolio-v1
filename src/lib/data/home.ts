@@ -14,7 +14,7 @@ const hero: {
 		'Debugging life, one project at a time ⚡',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/Dagmawi-Y', icon: 'i-carbon-logo-github' },
-		{ label: 'LinkedIn', href: 'https://linkedin.com/dagmawi-y-hailu', icon: 'i-carbon-logo-linkedin' },
+		{ label: 'LinkedIn', href: 'https://linkedin.com/in/dagmawi-y-hailu', icon: 'i-carbon-logo-linkedin' },
 		{ label: 'Twitter', href: 'https://x.com/daggyohannes', icon: 'i-carbon-logo-twitter' },
 		{ label: 'Email', href: 'mailto:dagmawi.inbox@gmail.com', icon: 'i-carbon-at' },
 		{label: 'Telegram', href: 'https://t.me/dag_mawi', icon: 'i-carbon-logo-telegram'},
