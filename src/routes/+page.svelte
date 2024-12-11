@@ -20,6 +20,7 @@
 
 	let api: CarouselAPI;
 	let showContactForm = false;
+	let shouldShowSparkles = false;
 
 	let currentGradient = {
 		firstLine: { start: 240, end: 30 }, // Initial blue to brown
@@ -51,6 +52,21 @@
 	});
 
 	let sparklesContainer: HTMLDivElement | null = null;
+
+	function handleFormOpen() {
+		showContactForm = true;
+		shouldShowSparkles = true;
+		createSparkles();
+	}
+
+	function handleFormCancel() {
+		shouldShowSparkles = false;
+		if (sparklesContainer) {
+			document.body.removeChild(sparklesContainer);
+			sparklesContainer = null;
+		}
+		showContactForm = false;
+	}
 
 	function createSparkles() {
 		// Remove existing sparkles if any
@@ -96,9 +112,6 @@
 				sparkle.style.opacity = '1';
 			}, i * 20);
 		});
-
-		// Show contact form
-		showContactForm = true;
 	}
 
 	function removeSparkles() {
@@ -128,7 +141,7 @@
 		}, sparkles.length * 20 + 500);
 	}
 
-	$: if (!showContactForm && sparklesContainer) {
+	$: if (!showContactForm && shouldShowSparkles) {
 		removeSparkles();
 	}
 </script>
@@ -192,14 +205,10 @@
 					role="button"
 					tabindex="0"
 					on:mouseenter={updateGradient}
-					on:click={() => {
-						createSparkles();
-						showContactForm = true;
-					}}
+					on:click={handleFormOpen}
 					on:keydown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {
-							createSparkles();
-							showContactForm = true;
+							handleFormOpen();
 						}
 					}}
 				>
@@ -263,5 +272,8 @@
 </ResponsiveContainer>
 
 {#if showContactForm}
-	<ContactForm bind:showContactForm />
+	<ContactForm 
+		bind:showContactForm 
+		on:cancel={handleFormCancel}
+	/>
 {/if}

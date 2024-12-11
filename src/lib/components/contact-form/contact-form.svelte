@@ -6,7 +6,10 @@
 	import { toast } from 'svelte-sonner';
 	import { fade } from 'svelte/transition';
 	import type { Selected } from 'bits-ui';
+	import emailjs from '@emailjs/browser';
+	import { createEventDispatcher } from 'svelte';
 
+	const dispatch = createEventDispatcher();
 	export let showContactForm: boolean;
 
 	let email = '';
@@ -50,15 +53,39 @@
 		isSubmitting = true;
 
 		try {
-			// Simulate API call
-			await new Promise(resolve => setTimeout(resolve, 1000));
-			toast.success('Thank you for your interest! We will contact you soon.');
+			const selectedService = typeof service === 'string' ? service : service?.value || 'Not specified';
+
+			await emailjs.send(
+				'service_hzl888m',  // EmailJS service id
+				'template_w41h96i', // EmailJS template id
+				{
+					to_email: 'daggyohannes@gmail.com',
+					from_email: email,
+					phone: phone,
+					service: selectedService,
+					reply_to: email
+				},
+				'7e_5TKdz89Mqn-hOC' // EmailJS public key
+			);
+			
+			toast.success('Thank you for your interest! I will contact you soon.', {
+				duration: 4000
+			});
 			showContactForm = false;
 		} catch (error) {
+			console.error('Error sending email:', error);
 			toast.error('Something went wrong. Please try again.');
 		} finally {
 			isSubmitting = false;
 		}
+	}
+
+	function handleCancel() {
+		toast.error('Form cancelled', {
+			duration: 2000
+		});
+		dispatch('cancel');
+		showContactForm = false;
 	}
 </script>
 
@@ -108,7 +135,7 @@
 				/>
 			</div>
 			<div class="flex justify-end gap-2">
-				<Button variant="outline" on:click={() => (showContactForm = false)}>
+				<Button variant="outline" on:click={handleCancel}>
 					Cancel
 				</Button>
 				<Button type="submit" disabled={isSubmitting}>
