@@ -119,26 +119,29 @@
 
 		const sparkles = Array.from(sparklesContainer.children) as HTMLElement[];
 		
-		// Animate sparkles out
-		sparkles.forEach((sparkle, i) => {
-			setTimeout(() => {
-				sparkle.style.transform = 'scale(1.5)';
-				sparkle.style.opacity = '0';
-			}, i * 20);
-		});
-
-		// Remove container after animations
+		// Add a delay before starting the fade out
 		setTimeout(() => {
-			if (sparklesContainer) {
-				sparklesContainer.style.opacity = '0';
+			// Animate sparkles out
+			sparkles.forEach((sparkle, i) => {
 				setTimeout(() => {
-					if (sparklesContainer && sparklesContainer.parentNode) {
-						document.body.removeChild(sparklesContainer);
-						sparklesContainer = null;
-					}
-				}, 500);
-			}
-		}, sparkles.length * 20 + 500);
+					sparkle.style.transform = 'scale(1.5)';
+					sparkle.style.opacity = '0';
+				}, i * 20);
+			});
+
+			// Remove container after animations
+			setTimeout(() => {
+				if (sparklesContainer) {
+					sparklesContainer.style.opacity = '0';
+					setTimeout(() => {
+						if (sparklesContainer && sparklesContainer.parentNode) {
+							document.body.removeChild(sparklesContainer);
+							sparklesContainer = null;
+						}
+					}, 500);
+				}
+			}, sparkles.length * 20 + 500);
+		}, 1000); // Wait 1 second before starting the fade out
 	}
 
 	$: if (!showContactForm && shouldShowSparkles) {
