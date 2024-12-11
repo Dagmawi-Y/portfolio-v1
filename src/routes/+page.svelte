@@ -17,6 +17,7 @@
 	import { type CarouselAPI } from '$lib/components/ui/carousel/context.js';
 	import { onMount } from 'svelte';
 	import ContactForm from '$lib/components/contact-form/contact-form.svelte';
+	import SeoMeta from '$lib/components/seo/seo-meta.svelte';
 
 	let api: CarouselAPI;
 	let showContactForm = false;
@@ -148,6 +149,13 @@
 		removeSparkles();
 	}
 </script>
+
+<SeoMeta
+	title="Home"
+	description="Software Engineer based in Ethiopia, specializing in full-stack development, cloud computing, and AI/ML. Experienced in React, Node.js, Python, and TypeScript."
+	keywords="Dagmawi Yohannes, Software Engineer Ethiopia, Full Stack Developer Addis Ababa, Ethiopian Developer, Cloud Computing Expert, AI ML Engineer Ethiopia"
+	url="https://dagmawi.me"
+/>
 
 <style>
 	@keyframes sparkle {

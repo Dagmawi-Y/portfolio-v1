@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dagmawi.me/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 10
+
+# Allow all bots to all pages
+Allow: /skills/
+Allow: /projects/
+Allow: /experience/
+Allow: /education/
+Allow: /search/
+
+# Block certain paths if needed
+# Disallow: /admin/
+# Disallow: /private/ 
