@@ -64,51 +64,26 @@ const YEAR = 365 * 24 * 60 * 60 * 1000;
 export function computeExactDuration(from: Date, to: Date = new Date()): string {
 	const fromMs = from.getTime();
 	const toMs = to.getTime();
+	const diffMs = toMs - fromMs;
 
-	const display: Array<string> = [];
+	// Calculate total years and months
+	const totalYears = diffMs / YEAR;
+	const totalMonths = diffMs / MONTH;
 
-	let remaining = toMs - fromMs;
-
-	const years = remaining / YEAR;
-
-	if (years >= 1) {
-		remaining = remaining % YEAR;
-		display.push(`${Math.trunc(years)} year${years >= 2 ? 's' : ''}`);
+	// If duration is 1 year or more, round to nearest year
+	if (totalYears >= 1) {
+		const roundedYears = Math.round(totalYears);
+		return `${roundedYears} year${roundedYears > 1 ? 's' : ''}`;
 	}
 
-	const months = remaining / MONTH;
-	if (months >= 1) {
-		remaining = remaining % MONTH;
-		display.push(`${Math.trunc(months)} month${months >= 2 ? 's' : ''}`);
+	// If duration is less than a year, round to nearest month
+	if (totalMonths >= 1) {
+		const roundedMonths = Math.round(totalMonths);
+		return `${roundedMonths} month${roundedMonths > 1 ? 's' : ''}`;
 	}
 
-	const weeks = remaining / WEEK;
-	if (weeks >= 1) {
-		remaining = remaining % WEEK;
-		display.push(`${Math.trunc(weeks)} week${weeks >= 2 ? 's' : ''}`);
-	}
-
-	const days = remaining / DAY;
-	if (days >= 1) {
-		remaining = remaining % DAY;
-		display.push(`${Math.trunc(days)} day${days >= 2 ? 's' : ''}`);
-	}
-
-	if (display.length === 0) {
-		return '1 day';
-	}
-
-	return display
-		.map((it, index) => {
-			if (display.length === 1 || index === display.length - 1) return it;
-
-			if (index === display.length - 2) {
-				return `${it} and`;
-			}
-
-			return `${it},`;
-		})
-		.join(' ');
+	// If less than a month, show 1 month
+	return '1 month';
 }
 
 const monthNames = [
