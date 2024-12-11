@@ -243,15 +243,6 @@ const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'kafka',
-		color: 'green',
-		description:
-			'Skilled in Apache Kafka for building real-time data streaming and event-driven architectures.',
-		logo: Assets.Kafka,
-		name: 'Kafka',
-		category: 'messaging'
-	}),
-	defineSkill({
 		slug: 'nginx',
 		color: 'green',
 		description:
@@ -289,9 +280,9 @@ const items = [
 	}),
 	defineSkill({
 		slug: 'expressjs',
-		color: 'blue',
+		color: 'gray',
 		description:
-			'Proficient in Express.js for building robust and scalable backend services in Node.js.',
+			'Proficient in Express.js for building scalable and robust web applications and RESTful APIs with Node.js.',
 		logo: Assets.ExpressJs,
 		name: 'Express.js',
 		category: 'framework'
@@ -313,6 +304,69 @@ const items = [
 		logo: Assets.Redis,
 		name: 'Redis',
 		category: 'database'
+	}),
+	defineSkill({
+		slug: 'elasticsearch',
+		color: 'yellow',
+		description:
+			'Experienced in ElasticSearch for implementing high-performance search and analytics capabilities, optimizing query performance and data indexing.',
+		logo: Assets.Unknown,
+		name: 'ElasticSearch',
+		category: 'database'
+	}),
+	defineSkill({
+		slug: 'nodejs',
+		color: 'green',
+		description:
+			'Strong expertise in Node.js for building fast, scalable server-side applications and microservices.',
+			logo: Assets.NodeJs,
+		name: 'Node.js',
+		category: 'runtime'
+	}),
+	defineSkill({
+		slug: 'kafka',
+		color: 'black',
+		description:
+			'Experienced in Apache Kafka for building real-time data streaming pipelines and event-driven architectures.',
+		logo: Assets.Kafka,
+		name: 'Apache Kafka',
+		category: 'messaging'
+	}),
+	defineSkill({
+		slug: 'mongodb',
+		color: 'green',
+		description:
+			'Proficient in MongoDB for designing and optimizing NoSQL databases, including complex aggregations and indexing strategies.',
+		logo: Assets.MongoDB,
+		name: 'MongoDB',
+		category: 'database'
+	}),
+	defineSkill({
+		slug: 'postgresql',
+		color: 'blue',
+		description:
+			'Skilled in PostgreSQL for designing efficient relational databases, complex queries, and database optimization.',
+		logo: Assets.PostgreSQL,
+		name: 'PostgreSQL',
+		category: 'database'
+	}),
+	defineSkill({
+		slug: 'restapi',
+		color: 'cyan',
+		description:
+			'Expert in designing and implementing RESTful APIs with best practices for scalability, security, and documentation.',
+		logo: Assets.Unknown,
+		name: 'REST API',
+		category: 'api'
+	}),
+	defineSkill({
+		slug: 'socketio',
+		color: 'purple',
+		description:
+			'Experienced in Socket.IO for implementing real-time, bidirectional communication in web applications.',
+		logo: Assets.Unknown,
+		name: 'Socket.IO',
+		category: 'library'
 	}),
 	defineSkill({
 		slug: 'leadership',

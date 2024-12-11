@@ -8,17 +8,17 @@ const items: Array<Experience> = [
 	{
 		slug: 'eaglelion-mobile-dev',
 		company: 'EagleLion Systems Technology',
-		description: 'Developing the merchant segment of a mobile super app for a local bank on both Android and iOS, implementing a pixel-perfect design and a seamless user experience across platforms. Created the mobile app player for TeleTV that attracted over 10 million users within months of its launch. Contributed to the development of CashGO, a foreign remittance app that drives over a million dollars per day into Ethiopia\'s economy.',
+		description: 'Developing the user-management service for a bank super-app in a microservice architecture. Developed the auth service for a local movie streaming app. Optimized a mongodb instance performance up-to 60% by integrating elastic search for highly performant indexing and search.',
 		contract: ContractType.FullTime,
-		type: 'Mobile Development',
+		type: 'Backend Development',
 		location: 'Addis Ababa, Ethiopia',
-		period: { from: new Date(2024, 6), to: new Date() },
-		skills: getSkills('react-native', 'ts', 'js', 'reactjs'),
-		name: 'Mobile/React Native Engineer',
+		period: { from: new Date(2024, 6), to: new Date(2024, 11) },
+		skills: getSkills('nestjs', 'ts', 'nodejs', 'expressjs', 'mongodb', 'postgresql', 'elasticsearch', 'kafka', 'redis', 'docker', 'restapi', 'socketio'),
+		name: 'Backend Engineer',
 		color: 'blue',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: 'Lead mobile developer working on fintech and entertainment applications'
+		shortDescription: 'Backend development focusing on microservices and database optimization'
 	},
 	{
 		slug: '360-ground',
