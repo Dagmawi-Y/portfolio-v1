@@ -39,7 +39,7 @@
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-    {JSON.stringify({
+    {@html JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dagmawi Yohannes",
