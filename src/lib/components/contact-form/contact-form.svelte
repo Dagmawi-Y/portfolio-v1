@@ -81,7 +81,7 @@
 	}
 
 	function handleCancel() {
-		toast.error('Form cancelled', {
+		toast.error('Don\'t miss out on a high-quality service!', {
 			duration: 2000
 		});
 		dispatch('cancel');
