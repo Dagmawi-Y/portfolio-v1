@@ -39,7 +39,7 @@
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-    {@html JSON.stringify({
+    {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dagmawi Yohannes",
@@ -58,6 +58,6 @@
         "addressLocality": "Addis Ababa",
         "addressCountry": "Ethiopia"
       }
-    })}
+    }
   </script>
 </svelte:head> 
