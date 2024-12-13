@@ -11,7 +11,8 @@ const items: Array<{
 	{ title: 'Projects', icon: 'i-carbon-cube', href: '/projects' },
 	{ title: 'Experience', icon: 'i-carbon-development', href: '/experience' },
 	{ title: 'Education', icon: 'i-carbon-education', href: '/education' },
-	{ title: 'Resume', icon: 'i-carbon-document', href: '/resume' }
+	{ title: 'Resume', icon: 'i-carbon-document', href: '/resume' },
+	{ title: 'Blogs', icon: 'i-carbon-blog', href: '/blogs' }
 ];
 
 const NavBarData = { left, items };

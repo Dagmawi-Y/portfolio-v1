@@ -350,7 +350,7 @@
 			<div class="description-container w-full">
 				<p class="default-description" class:hidden={isHovered}>{HomeData.hero.description}</p>
 				<p class="detailed-description" class:show={isHovered}>
-					I'm a software engineer from Ethiopia, focused on full-stack and mobile development. I’m fascinated by the power of data and machines to change the world, and I’m always exploring new ideas in this space. Honestly, I love what I do so much—it’s like getting paid to have a fun travel through the digital world every day!
+					I'm a software engineer from Ethiopia, focused on full-stack and mobile development. I’m fascinated by the power of data and machines to change the world, and I’m always exploring new ideas in this space. <br>Its been 4 years since I started doing this, and honestly, I love what I do so much—it’s like getting paid to have a fun travel through a digital world, every day!
 					<br><br><b>Psst... click my name for a surprise!✨</b>
 				</p>
 			</div>
