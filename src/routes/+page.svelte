@@ -148,6 +148,18 @@
 	$: if (!showContactForm && shouldShowSparkles) {
 		removeSparkles();
 	}
+
+	let isHovered = false;
+	let contentContainer: HTMLElement;
+
+	function handleMouseEnter() {
+		isHovered = true;
+		updateGradient();
+	}
+
+	function handleMouseLeave() {
+		isHovered = false;
+	}
 </script>
 
 <SeoMeta
@@ -172,6 +184,8 @@
 	.rainbow-text {
 		cursor: pointer;
 		display: inline-block;
+		position: relative;
+		z-index: 10;
 	}
 
 	.rainbow-text span {
@@ -182,6 +196,83 @@
 
 	.rainbow-text:hover span {
 		opacity: 1;
+	}
+
+	.content-container {
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.content-container.blurred > *:not(.name-description-container),
+		.content-container.blurred .name-description-container > *:not(.rainbow-text):not(.description-container) {
+		filter: blur(5px);
+		opacity: 0.5;
+		pointer-events: none;
+		transition: all 0.3s ease;
+	}
+
+	.name-description-container {
+		position: relative;
+		z-index: 5;
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.description-container {
+		position: relative;
+		min-height: 4em;
+		width: 100%;
+		overflow: visible;
+		z-index: 20;
+	}
+
+	.description-container p {
+		margin: 0;
+		width: 100%;
+		text-align: justify;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+		background-color: var(--background);
+	}
+
+	.default-description {
+		transform: translateY(0);
+		opacity: 1;
+		position: relative;
+	}
+
+	.default-description.hidden {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	.detailed-description {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(20px);
+		opacity: 0;
+		z-index: 25;
+	}
+
+	.detailed-description.show {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.click-hint {
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.click-hint.show {
+		opacity: 1;
+		visibility: visible;
 	}
 
 	@keyframes rainbow-wave {
@@ -195,27 +286,33 @@
 			transform: translateY(0);
 		}
 	}
+
+	.social-links {
+		position: relative;
+		z-index: 15;
+	}
 </style>
 
 <Title title={HomeData.title} />
 <ResponsiveContainer className="flex flex-col justify-center flex-1">
 	<div
-		class="flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-center mt-5" 
+		bind:this={contentContainer}
+		class="content-container flex flex-1 flex-col items-center justify-center gap-8 px-14 md:flex-row md:justify-center mt-5"
+		class:blurred={isHovered}
 	>
 		<img 
 			src="/images/me@360.jpg" 
 			class="h-[200px] w-[200px] rounded-full object-cover aspect-square grayscale hover:grayscale-0 transition-all duration-300" 
 			alt="Avatar" 
 		/>
-		<div
-			class="flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left"
-		>
+		<div class="name-description-container flex flex-col items-center justify-center gap-4 text-center md:items-start md:text-left">
 			<H1>
 				<div 
 					class="rainbow-text" 
 					role="button"
 					tabindex="0"
-					on:mouseenter={updateGradient}
+					on:mouseenter={handleMouseEnter}
+					on:mouseleave={handleMouseLeave}
 					on:click={handleFormOpen}
 					on:keydown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {
@@ -241,8 +338,15 @@
 					{/each}
 				</div>
 			</H1>
-			<p>{HomeData.hero.description}</p>
-			<div class="flex flex-row gap-1">
+			<div class="description-container">
+				<p class="default-description" class:hidden={isHovered}>{HomeData.hero.description}</p>
+				<p class="detailed-description" class:show={isHovered}>
+					Hey There! I'm a passionate Ethiopian Software Engineer with expertise in full-stack development, Mobile development, and AI/ML. With a proven track record of delivering innovative solutions and a deep understanding of modern technologies, I love to create impactful digital experiences.
+					<br /><br />
+					<b>Click my name above to connect! ☝️</b>
+				</p>
+			</div>
+			<div class="social-links flex flex-row gap-1">
 				{#each HomeData.hero.links as item}
 					<a href={item.href} target="_blank">
 						<Tooltip>
