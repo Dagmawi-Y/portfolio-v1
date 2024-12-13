@@ -223,15 +223,21 @@
 		min-height: 4em;
 		width: 100%;
 		overflow: visible;
-		z-index: 20;
+		z-index: 5;
 	}
 
 	.description-container p {
 		margin: 0;
 		width: 100%;
-		text-align: justify;
-		transition: transform 0.3s ease, opacity 0.3s ease;
+		text-align: center;
+		transition: all 0.3s ease;
 		background-color: var(--background);
+	}
+
+	@media (min-width: 768px) {
+		.description-container p {
+			text-align: justify;
+		}
 	}
 
 	.default-description {
@@ -251,12 +257,14 @@
 		left: 0;
 		transform: translateY(20px);
 		opacity: 0;
-		z-index: 25;
+		z-index: 1;
+		transition: all 0.3s ease;
 	}
 
 	.detailed-description.show {
 		transform: translateY(0);
 		opacity: 1;
+		z-index: 25;
 	}
 
 	.click-hint {
@@ -290,6 +298,7 @@
 	.social-links {
 		position: relative;
 		z-index: 15;
+		pointer-events: auto;
 	}
 </style>
 
@@ -338,12 +347,11 @@
 					{/each}
 				</div>
 			</H1>
-			<div class="description-container">
+			<div class="description-container w-full">
 				<p class="default-description" class:hidden={isHovered}>{HomeData.hero.description}</p>
 				<p class="detailed-description" class:show={isHovered}>
-					Hey There! I'm a passionate Ethiopian Software Engineer with expertise in full-stack development, Mobile development, and AI/ML. With a proven track record of delivering innovative solutions and a deep understanding of modern technologies, I love to create impactful digital experiences.
-					<br /><br />
-					<b>Click my name above to connect! ☝️</b>
+					I'm a software engineer from Ethiopia, focused on full-stack and mobile development. I’m fascinated by the power of data and machines to change the world, and I’m always exploring new ideas in this space. Honestly, I love what I do so much—it’s like getting paid to have a fun travel through the digital world every day!
+					<br><br><b>Psst... click my name for a surprise!✨</b>
 				</p>
 			</div>
 			<div class="social-links flex flex-row gap-1">
