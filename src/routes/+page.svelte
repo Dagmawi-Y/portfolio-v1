@@ -152,8 +152,8 @@
 
 <SeoMeta
 	title="Home"
-	description="Software Engineer based in Ethiopia, specializing in full-stack development, cloud computing, and AI/ML. Experienced in React, Node.js, Python, and TypeScript."
-	keywords="Dagmawi Yohannes, Software Engineer Ethiopia, Full Stack Developer Addis Ababa, Ethiopian Developer, Cloud Computing Expert, AI ML Engineer Ethiopia"
+	description="Meet Dagmawi Yohannes (Daggy) - Leading Ethiopian Software Engineer based in Addis Ababa. Expert in full-stack development, cloud computing, and AI/ML with a passion for innovative solutions."
+	keywords="Dagmawi Yohannes, Daggy, Ethiopian Developer, Software Engineer Ethiopia, Software Engineer Addis Ababa, Ethiopian Programmer, Ethiopian Software Developer, Dagmawi, Software Developer Addis Ababa, Tech Expert Ethiopia"
 	url="https://dagmawi.me"
 />
 

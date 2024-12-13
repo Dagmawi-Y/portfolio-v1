@@ -2,8 +2,8 @@
   import BaseData from '$lib/data/base';
 
   export let title = 'Dagmawi Yohannes';
-  export let description = 'Software Engineer based in Ethiopia, specializing in full-stack development, cloud computing, and AI/ML';
-  export let keywords = 'Dagmawi Yohannes, Software Engineer, Ethiopia, Full Stack Developer, Cloud Computing, AI/ML, React, Node.js, Python, TypeScript, SvelteKit';
+  export let description = 'Ethiopian Software Engineer based in Addis Ababa, specializing in full-stack development, cloud computing, and AI/ML. Known as Daggy in the tech community.';
+  export let keywords = 'Dagmawi Yohannes, Daggy, Ethiopian Developer, Software Engineer in Ethiopia, Software Engineer Addis Ababa, Ethiopian Programmer, Full Stack Developer Ethiopia, Cloud Computing Expert Ethiopia, AI ML Engineer Ethiopia, Dagmawi, Software Developer Ethiopia';
   export let image = '/images/me@360.jpg';
   export let url = 'https://dagmawi.me';
   export let type = 'website';
@@ -15,6 +15,15 @@
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
   <meta name="author" content="Dagmawi Yohannes" />
+
+  <!-- Favicon and Web Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content={`${title} | ${BaseData.firstName} ${BaseData.lastName}`} />
