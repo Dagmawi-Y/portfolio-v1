@@ -220,7 +220,7 @@
 
 	.description-container {
 		position: relative;
-		min-height: 4em;
+		min-height: 2em;
 		width: 100%;
 		overflow: visible;
 		z-index: 5;
@@ -349,9 +349,18 @@
 			</H1>
 			<div class="description-container w-full">
 				<p class="default-description" class:hidden={isHovered}>{HomeData.hero.description}</p>
-				<p class="detailed-description" class:show={isHovered}>
-					I'm a software engineer from Ethiopia, focused on full-stack and mobile development. I’m fascinated by the power of data and machines to change the world, and I’m always exploring new ideas in this space. <br>Its been 4 years since I started doing this, and honestly, I love what I do so much—it’s like getting paid to have a fun travel through a digital world, every day!
-					<br><br><b>Psst... click my name for a surprise!✨</b>
+				<p 
+					class="detailed-description" 
+					class:show={isHovered}
+				>
+					I'm A <b>Software Engineer</b> from <b>Ethiopia</b> with expertise in Full-Stack
+					development. I'm also a well-rounded <b>Mobile App Developer</b>, with extensive experience building real-world, large-scale mobile solutions.<br /><br>
+					<b>I’m deeply</b> fascinated by the transformative power of data and its potential to shape the world.
+					I constantly research and explore ways to integrate this potential into my apps. My experience at Explore AI has been instrumental in this journey.<br /><br>
+					<b>With 4+ years of experience,</b> I genuinely love what I do—every day feels like an exciting adventure
+					through the digital world, and getting paid for it is just the cherry on top!
+
+					<br /><br /><b>Psst... click my name to be part of the adventure!</b>
 				</p>
 			</div>
 			<div class="social-links flex flex-row gap-1">
