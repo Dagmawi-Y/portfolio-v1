@@ -14,7 +14,7 @@
 			renderer: 'svg',
 			loop: true,
 			autoplay: true,
-			path: 'https://assets10.lottiefiles.com/packages/lf20_wd1udlcz.json'
+			path: '/lotties/blog-lottie.json'
 		});
 	});
 </script>
@@ -25,7 +25,7 @@
 		<div class="relative">
 			<H1 class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">Coming Soon</H1>
 			<div class="absolute -top-6 -right-6">
-				<div class="text-3xl animate-bounce">✨</div>
+				<div class="text-xl animate-bounce">🔥</div>
 			</div>
 		</div>
 		<div class="max-w-md mx-auto">
@@ -34,7 +34,7 @@
 				My blog section is under construction, but I'm working hard to bring you insightful articles and engaging stories.
 			</Muted>
 		</div>
-		<div bind:this={container} class="w-[350px] h-[350px] mt-8" ></div>
+		<div bind:this={container} class="w-[350px] h-[350px] mt-2" ></div>
 	</div>
 </ResponsiveContainer>
 
